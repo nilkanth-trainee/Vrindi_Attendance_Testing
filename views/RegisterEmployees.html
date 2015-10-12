@@ -1,0 +1,59 @@
+﻿<div id="ETrackingWaveCreateStoreUserView" data-role="view" data-title="Time Tracker" data-layout="ETrackingWaveHomeLayout" data-model="app.storeUserAccount" data-init="app.storeUserAccount.init" data-show="app.storeUserAccount.show" data-use-native-srolling="true">
+ <header data-role="header">
+        <div data-role="navbar">
+            <!--<a data-role="button" data-align="left"  class="back-button" data-click="app.storeUserAccount.navigateBack"> <i class="fa fa-angle-left"></i></a>-->
+             <a class="about-button" data-align="left" href="#:back" data-role="button"><i class="fa fa-chevron-left"></i> Back</a>
+            <span data-role="view-title"></span>
+       </div>
+  </header>
+    <div data-role="footer">
+            <div class="divPoweredByVrindi">
+                 <a href="https://www.vrindi.com" class="abtnVrindi" data-role="button" data-rel="external" >Powered by Vrindi Inc.</a>
+            </div>
+        </div>
+
+       <div class="controller-login">
+               <!-- <div class="login-logo wagebase"></div>-->
+              <form id="ETrackingWaveCreateStoreUserForm">
+               <div class="login-holder">
+                <div class="login-box">
+                    <div class="card-section">
+                        <div class="form-heading">
+                            <!-- <i class="fa fa-info-circle"></i> -->
+                           <label class="lblHeading">Please fill up Employee information</label>
+                        </div>
+                        <div class="form-joined">
+                            <div class="form-item icon">
+                                <i class="fa fa-user"></i>
+                               <div class="form-text large">
+                                    <input type="text" autofocus="" required="required" placeholder="Full Name" value="" class="username" name="storeUserFullName" id="storeUserFullName" data-bind="value:storeUserFullName" />
+                                </div>
+                                <span data-for='storeUserFullName' class='k-invalid-msg'></span>
+                            </div>
+
+                            <div class="form-item icon">
+                                <i class="fa fa-envelope"></i>
+                                <div class="form-text large">
+                                    <input type="email" autofocus="" required="required" placeholder="Email Address" value="" class="username" name="storeUserUserName" id="storeUserUserName" data-bind="value:storeUserUserName" />
+                                </div>
+                                <span data-for='storeUserUserName' class='k-invalid-msg'></span>
+                            </div>
+
+                            <div class="form-item icon">
+                                <i class="fa fa-key"></i>
+                                <div class="form-text large">
+                                    <input type="password" required="required" placeholder="Password" class="password" name="storeUserPassword" id="storeUserPassword" data-bind="value:storeUserPassword" />
+                                </div>
+                                <span data-for='storeUserPassword' class='k-invalid-msg'></span>
+                            </div>
+                            
+                        </div>
+                        <a data-role="button" class="button-kit xlarge green" data-bind="click: createStoreUserAccount">Register</a>
+                    </div>
+                </div>
+            </div>
+              </form>
+           </div>  
+    </div> 
+   
+

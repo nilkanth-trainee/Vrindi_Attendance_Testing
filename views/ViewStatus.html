@@ -1,0 +1,48 @@
+<div data-role="view" data-title="Time Tracker" data-layout="ETrackingWaveHomeLayout" data-model="app.accountDashboard" data-init="app.accountDashboard.init" data-show="app.accountDashboard.show" data-use-native-srolling="true">
+
+    <!--<div data-role="header">
+        <div data-role="navbar">
+            ETracking Wave - View Employee Current Status
+            <a class="nav-button" data-align="left" data-role="backbutton" data-click="app.accountDashboard.logout">Back</a>
+        </div>
+    </div>-->
+
+
+    <div class="controller-login">
+        <div class="login-logo wagebase"></div>
+        <form >
+            <div class="login-holder">
+                <div class="login-box">
+                    <div class="card-section">
+                        <div class="form-joined">
+                            <ul id="signup-form" data-role="listview" data-style="inset">
+                                <li>
+                                    <div class="form-item icon">
+                                        <div class="form-text large">
+                                            <a data-role="button" class="button-kit xlarge green" data-bind="click: markEntrees">Mark Entrees</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-item icon">
+                                        <div class="form-text large">
+                                            <a data-role="button" class="button-kit xlarge green" data-bind="click: viewStatus">View Status</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-item icon">
+                                        <div class="form-text large">
+                                            <a data-role="button" class="button-kit xlarge green" data-bind="click: createEmployeeAccount">Add Employee Account</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>

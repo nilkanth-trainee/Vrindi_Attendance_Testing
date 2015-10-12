@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Vrindi ETrackingWave</title>
+    <!-- Styles -->
+    <script src="cordova.js"></script>
+    <script src="splashscreen.js"></script>
+    <script src="notification.js"></script>
+    <script src="barcodescanner.js"></script>
+    <script src="device.js"></script>
+    <script src="MacAddress.js"></script>
+
+    <link rel="stylesheet" href="kendo/styles/kendo.mobile.all.min.css" />
+    <link href="styles/kendo.mobile.flat.flat-ui.css" rel="stylesheet" />
+    <link href="font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Scripts -->
+    <!--<script type="text/javascript" src="cordova.js"></script>-->
+    <script type="text/javascript" src="kendo/js/jquery.min.js"></script>
+    <script type="text/javascript" src="kendo/js/kendo.mobile.min.js"></script>
+
+    <!-- Default Stylesheet -->
+    <link rel="stylesheet" href="styles/ETrackingWave.css" />
+    <!-- Default App JS-->
+    <script src="scripts/EtrackingWaveApp.js"></script>
+
+    <!-- View Models JS -->
+    <script src="viewModels/login.js"></script>
+    <script src="viewModels/accountDashboard.js"></script>
+    <script src="viewModels/storeAdminAccountDashboard.js"></script>
+    <script src="viewModels/StoreUserList.js"></script>
+    <script src="viewModels/StoreUserLogin.js"></script>
+    <script src="viewModels/MarkEntries.js"></script>
+    <script src="viewModels/ViewStatus.js"></script>
+    <script src="viewModels/createBusinessAccount.js"></script>
+    <script src="viewModels/createStoreUserAccount.js"></script>
+   
+
+</head>
+<body>
+
+    <div data-role="layout" data-id="ETrackingWaveHomeLayout">
+        <header data-role="header" data-id="ETrackingWaveHeader">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+            </div>
+        </header>
+      
+    </div>
+
+    <div id="ETrackingWaveHomeView" data-role="view" data-title="Time Tracker" data-layout="ETrackingWaveHomeLayout" data-model="app.Login" data-init="app.Login.init" data-show="app.Login.show">
+        <div data-role="footer">
+            <div data-role="tabstrip" data-id="ETrackingWaveHomeTabstrip">
+                <a href="#ETrackingWaveHomeView" data-icon="home">Home</a>
+                <a href="views/CreateBusinessAccount.html" data-icon="contacts">New Business Account</a>
+            </div>
+            <!--<div class="divPoweredByVrindi" >
+                 <a href="https://www.vrindi.com" style="background:#fff !important;color:#2d3e52 !important" class="abtnVrindi" data-role="button" data-rel="external" >Powered by Vrindi Inc.</a>
+            </div>-->
+        </div>
+        
+       
+          <div class="controller-login">
+            <div class="login-logo wagebase"></div>
+            <form id="ETrackingWaveLoginForm">
+                <div class="login-holder">
+                    <div class="login-box">
+                        <div class="card-section">
+                            <div class="form-heading">
+                                <!-- <i class="fa fa-info-circle"></i> -->
+                                <label class="lblHeading">Login to your account</label>
+                            </div>
+                            <div class="form-joined">
+                                <div class="form-item icon">
+                                    <i class="fa fa-user"></i>
+                                    <div class="form-text large">
+                                        <input type="email" autofocus="" required="required" placeholder="Email Address" value="" class="username" name="loginUserName" id="loginUserName" data-bind="value:loginUserName" />
+                                    </div>
+                                    <span data-for='loginUserName' class='k-invalid-msg'></span>
+                                </div>
+
+                                <div class="form-item icon">
+                                    <i class="fa fa-key"></i>
+                                    <div class="form-text large">
+                                        <input type="password" required="required" placeholder="Password" class="password" name="loginPassword" id="loginPassword" data-bind="value:loginPassword" />
+                                    </div>
+                                    <span data-for='loginPassword' class='k-invalid-msg'></span>
+                                </div>
+                            </div>
+                            <a data-role="button" class="button-kit xlarge green" data-bind="click: login">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>    
+</body>
+</html>

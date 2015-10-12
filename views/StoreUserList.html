@@ -1,0 +1,53 @@
+﻿<div id="ETrackingStoreUserListInfo" data-role="view" data-title="Time Tracker" data-layout="ETrackingWaveHomeLayout" data-model="app.storeUserList" data-init="app.storeUserList.init" data-show="app.storeUserList.show" data-use-native-srolling="true">
+    <header data-role="header">
+        <div data-role="navbar">
+            <!--<a data-role="button" data-align="left" class="back-button" data-click="app.storeUserList.navigateBack"><i class="fa fa-angle-left"></i></a>
+            -->
+             <a class="about-button" data-align="left" href="#:back" data-role="button"><i class="fa fa-chevron-left"></i> Back</a>
+             <span data-role="view-title"></span>
+           <!--  <a class="about-button" data-align="right"  data-role="button" data-click="app.storeUserList.refreshPage"><i class="fa fa-refresh "></i> Refresh</a>-->
+          
+               
+        </div>
+    </header>
+    <div data-role="footer">
+        <div class="divPoweredByVrindi">
+            <a href="https://www.vrindi.com" class="abtnVrindi" data-role="button" data-rel="external">Powered by Vrindi Inc.</a>
+        </div>
+    </div>
+    <div class="controller-login">
+        <!-- <div class="login-logo wagebase"></div>-->
+        <form id="ETrackingStoreInfoForm">
+            <div class="login-holder">
+                <div class="login-box">
+                    <div class="card-section">
+                        <div class="form-joined">
+                            <div class="form-item icon">
+                                <div class="form-text large" style="border: none">
+                                    <div class="form-text large" style="border: none">
+                                        <div class="form-heading">
+                                            <!-- <i class="fa fa-info-circle"></i> -->
+                                            <label id="lblHeadingCompany" class="lblHeading">Employee List</label>
+                                        </div>
+                                        <ul  class="lStoreUserListFilterable" id="lStoreUserListFilterable" data-style="inset"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </form>
+    </div>
+
+</div>
+<script id="myStoreUserListTemplate" type="text/x-kendo-template">
+    <a   class="aBtnlStoreUserListFilterable" href="\#views/StoreUserLogin.html?suid=#:userId#&suname=#: userFullName #&suemailid=#: userEmailId #" data-transition="slide" >
+                        <p class="pRowEntryUser">
+                          #: userFullName #
+                        </p>
+     </a>
+</script>
+
+
+

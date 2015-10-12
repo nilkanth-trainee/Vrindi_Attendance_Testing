@@ -1,0 +1,283 @@
+﻿html, body {
+    height: 100%;
+    background: #eeeeee none repeat-x scroll 0 0;
+    color: #444;
+    font-family: Arial,"Source Sans Pro",Helvetica,sans-serif;
+    font-size: 13px;
+    margin: 0;
+    position: relative;
+}
+
+.controller-login {
+    box-sizing: border-box;
+    /*padding-top: 100px;*/
+    padding-top: 20px;
+}
+
+#login-holder {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    width: 420px;
+}
+
+    #login-holder > div {
+        position: relative;
+    }
+
+    #login-holder .card-section {
+        box-sizing: border-box;
+        padding: 50px 50px 40px;
+        width: 100%;
+    }
+
+.card-section {
+    background: white none repeat scroll 0 0;
+    border-radius: 4px;
+    /*box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);*/
+    font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+    overflow: hidden;
+    padding: 0 30px 30px;
+}
+
+.controller-login .login-logo {
+    background: rgba(0, 0, 0, 0) url("../images/wiw-logo.svg") no-repeat scroll 0 0;
+    height: 75px;
+    margin: 15px auto 0;
+    width: 247px;
+}
+
+.form-joined .form-item .form-text, .form-joined .form-item .form-select {
+    border-radius: 0;
+    border-top-width: 0;
+    overflow: hidden;
+}
+
+.form-joined .form-item:first-child .form-text, .form-joined .form-item:first-child .form-select {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-top-width: 1px;
+}
+
+.form-joined .form-item.icon .form-text, .form-joined .form-item.icon .form-select {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.form-joined .form-item {
+    margin-bottom: 0;
+}
+
+.form-item {
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.form-text.large {
+    padding: 0 12px;
+}
+
+.form-text {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    color: #999;
+    padding: 0 10px;
+}
+
+.form-joined .form-item.icon > i {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-top-width: 0;
+    font-size: 18px;
+}
+
+.form-item.icon > i {
+    background: #eee none repeat scroll 0 0;
+    border-color: #ddd;
+    border-radius: 2px 0 0 2px;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    color: #999;
+    float: left;
+    font-size: 16px;
+    /*height: 46px;
+  line-height: 46px;*/
+    height: 47px;
+    line-height: 47px;
+    text-align: center;
+    width: 46px;
+}
+
+.form-joined .form-item.icon:first-child > i {
+    border-top-left-radius: 2px;
+    border-top-width: 1px;
+}
+
+.form-joined .form-item.icon:last-child > i {
+    border-bottom-left-radius: 2px;
+}
+
+.form-text.large input, .form-text.large blockquote, .form-text.large select {
+    font-size: 20px;
+    font-weight: 400;
+    height: 46px;
+    min-height: 46px;
+}
+.selectTimeZone {
+    font-weight: 400 !important;
+    height: 46px !important;
+    min-height: 46px !important; 
+    font-family: "Source Sans Pro",Arial,Helvetica,sans-serif !important;
+    font-size: 18px !important;
+}
+.form-text input, .form-text textarea, .form-text blockquote, .form-text.large select {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    color: #666;
+    font-family: "Source Sans Pro",Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    height: 33px;
+    line-height: 33px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.form-joined {
+    margin-bottom: 20px;
+}
+
+#login-holder .button-kit.xlarge {
+    font-size: 20px;
+    height: 46px;
+    line-height: 49px;
+}
+
+#login-holder .button-kit {
+    background: #51a33d;
+    border-width: 0;
+    box-shadow: none;
+    font-family: "Source Sans Pro",Arial,Helvetica,sans-serif;
+    text-shadow: none;
+    text-align: center;
+}
+
+.km-flat .km-view .km-content .km-button {
+    background: #51a33d;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.button-kit.xlarge {
+    width: 100%;
+}
+
+.button.button-kit.wide, input.button-kit.wide {
+    width: 100%;
+}
+
+.lblHeading {
+    font-family: "Source Sans Pro",Arial,Helvetica,sans-serif;
+    font-size: 17px;
+    line-height: 30px;
+    color: #666;
+    font-weight: 600;
+}
+
+.invalid, .k-invalid-msg {
+    color: red;
+}
+
+.hideEntryButtons {
+    display:none;
+}
+.showEntryButtons {
+    display:block;
+}
+.pRowEntry {
+    padding:0px;margin:0px;
+}
+.divPoweredByVrindi,.abtnVrindi {
+    width:100%;text-align:center;
+    margin:0px;padding:0px;
+    background:#2d3e52 !important;
+}
+.accountDashboardUl > li {
+    background-color:#fff !important;
+    border:none !important;
+}
+/*
+.lStoreUserListFilterable > li {
+     font-family: "Source Sans Pro",Arial,Helvetica,sans-serif;
+     border:1px solid #dfe1e2;
+      line-height: 0.6em !important;
+}
+*/
+.lStoreUserListFilterable > li {
+    /*background-color:#51a33d !important;background-color:#51a33d !important;*/ 
+     font-family: "Source Sans Pro",Arial,Helvetica,sans-serif;
+      border:1px solid #dfe1e2 !important;
+      line-height: 0.6em !important;
+      width:31%;
+      margin:0px 5px;
+      float:left;
+      display:block;
+      margin:5px;
+}
+
+.lStoreUserListFilterable {
+    margin:0px;
+}
+.aBtnlStoreUserListFilterable,.lStoreUserListFilterable{
+    padding:1px !important;
+}
+.form-text .km-filter-wrap {
+    padding:0px !important;
+    margin:0px 0px 10px 0px;
+}
+#divNoEntriesFond {
+    margin:10px;
+    font-family: "Source Sans Pro",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+    color: #666;
+    font-weight: 600;
+}
+.divCurrentDayEntries {
+    margin:0px 40px;
+}
+.entryDetailsIcons {
+    padding:0px 10px;
+}
+.spnFormatedDateTimeEntry {
+    float:right
+}
+.spnEntryDescription {
+}
+.txtShowPassword {
+    vertical-align:middle !important;
+}
+/*
+.thumbClickGreenBtn {
+    width:80px;
+    height:50px;
+    padding:15px !important;
+}*/
+.thumbClickGreenBtn {
+    width: 90px;
+    height: 65px;
+    font-size:25px;
+    padding:15px !important;
+}
+.thumbClickGreenBtnColspan {
+      width: 200px;
+    height: 60px;
+    font-size:17px;
+    padding: 20px !important;
+}
+/**/
+/*.thumbClickGreenBtnColspan {
+    width:91%;  height:50px;
+    padding:15px !important;
+}*/

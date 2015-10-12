@@ -1,0 +1,96 @@
+<div id="ETrackingAccountDashboard" data-role="view" data-title="Time Tracker" data-layout="ETrackingWaveHomeLayout" data-model="app.storeAccountDashboard" data-init="app.storeAccountDashboard.init" data-show="app.storeAccountDashboard.show" data-use-native-srolling="true">
+    <header data-role="header">
+        <div data-role="navbar">
+            <a class="nav-button" href="#leftSidePanel" data-rel="drawer" data-role="button" data-align="left"><i class="fa fa-bars"></i></a>
+            <span data-role="view-title"></span>
+            <a class="nav-button" data-role="button" data-align="right" data-click="app.storeAccountDashboard.logout"><i class="fa fa-power-off"></i> Logout</a>
+        </div>
+    </header>
+    <div data-role="footer">
+        <div class="divPoweredByVrindi">
+            <a href="https://www.vrindi.com" class="abtnVrindi" data-role="button" data-rel="external">Powered by Vrindi Inc.</a>
+        </div>
+    </div>
+
+    <div class="controller-login">
+        <!-- <div class="login-logo wagebase"></div>-->
+        <form id="ETrackingStoreInfoForm">
+            <div class="login-holder">
+                <div class="login-box">
+                    <div class="card-section" style="padding:0px 20px 30px;">
+                        <div class="form-joined">
+                            <div class="form-item icon">
+                                <div class="form-text large" style="border: none;padding:0px;">
+                                    <div class="form-text large" style="border: none;padding:0px;">
+                                        <div class="form-heading">
+                                            <!-- <i class="fa fa-info-circle"></i> -->
+                                            <label id="lblHeadingCompany" class="lblHeading">Employee List</label>
+                                        </div>
+                                        <ul class="lStoreUserListFilterable" id="lStoreUserListFilterable" data-style="inset"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        function closeModalViewLogin() {
+            $("#modalview-StoreAdminPanelLogin").kendoMobileModalView("close");
+        }
+    </script>
+</div>
+<script id="myStoreUserListTemplate" type="text/x-kendo-template">
+    <a   class="aBtnlStoreUserListFilterable" href="\#views/StoreUserLogin.html?suid=#:userId#&suname=#: userFullName #&suemailid=#: userEmailId #" data-transition="slide" >
+                        <p class="pRowEntryUser">
+                          #: userFullName #
+                        </p>
+     </a>
+</script>
+<div data-role="modalview" id="modalview-StoreAdminPanelLogin" style="width: 90%; height: 60%" data-open="app.storeAccountDashboard.onOpenAdminVerificationPanel">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span>Verify Admin Authority</span>
+            <a data-click="closeModalViewLogin" data-role="button" data-align="right"><i class="fa fa-close"></i></a>
+        </div>
+    </div>
+    <div class="controller-login">
+        <form id="Form1">
+            <div class="login-holder">
+                <div class="login-box">
+                    <div class="card-section" >
+                        <div class="form-joined">
+                            <div class="form-item icon">
+                                <i class="fa fa-key"></i>
+                                <div class="form-text large" >
+                                    <input type="password" required="required" placeholder="Password" class="password" name="txtStoreAdminPassword" id="txtStoreAdminPassword" data-bind="value:StoreAdminPassword"  />
+                                </div>
+                            </div>
+                        </div>
+                        <a data-role="button" class="button-kit xlarge green" data-click="app.storeAccountDashboard.onLoginAdminClick">Verify</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<div data-role="drawer" id="leftSidePanel" data-title="Go To" data-use-native-scrolling="true" data-views="['ETrackingAccountDashboard']" data-stretch="true">
+    <header data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+        </div>
+    </header>
+
+    <ul data-role="listview" class="km-listview-icons">
+        <li><i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;<a href="#modalview-StoreAdminPanelLogin" data-role="button" data-rel="modalview"> Admin Panel</a></li>
+        <!--   <li><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Application Panel</li>-->
+    </ul>
+
+</div>
+
+
+

@@ -1,0 +1,97 @@
+﻿<div data-role="view" data-title="Time Tracker" data-layout="ETrackingWaveHomeLayout" data-model="app.businessAccount" data-init="app.businessAccount.init" data-show="app.businessAccount.show" data-use-native-srolling="true">
+     <header data-role="header">
+        <div data-role="navbar">
+            <a data-role="button" data-align="left" href="#ETrackingWaveHomeView"  class="back-button"> <i class="fa fa-chevron-left"></i> Back</a>
+            <span data-role="view-title"></span>
+       </div>
+  </header>
+    <div data-role="footer">
+            <div class="divPoweredByVrindi">
+                 <a href="https://www.vrindi.com" class="abtnVrindi" data-role="button" data-rel="external" >Powered by Vrindi Inc.</a>
+            </div>
+        </div>
+    <div class="controller-login">
+        <!--<div class="login-logo wagebase"></div>-->
+        <form id="ETrackingWaveLoginForm">
+            <div class="login-holder">
+                <div class="login-box">
+                    <div class="card-section">
+                        <div class="form-heading">
+                            <!-- <i class="fa fa-info-circle"></i> -->
+                            <label class="lblHeading">Please fill up below information</label>
+                        </div>
+                        <div class="form-joined">
+                            <div class="form-item icon">
+                                <i class="fa fa-briefcase"></i>
+                                <div class="form-text large">
+                                    <input type="text" autofocus="" required="required" placeholder="Company Name" value="" class="username" name="companyName" id="companyName" data-bind="value:companyName" />
+                                </div>
+                                <span data-for='companyName' class='k-invalid-msg'></span>
+                            </div>
+
+                            <div class="form-item icon">
+                                <i class="fa fa-user"></i>
+                                <div class="form-text large">
+                                    <input type="email" autofocus="" required="required" placeholder="Email Address" value="" class="username" name="loginBusinessUserName" id="loginBusinessUserName" data-bind="value:loginBusinessUserName" />
+                                </div>
+                                <span data-for='loginUserName' class='k-invalid-msg'></span>
+                            </div>
+
+                            <div class="form-item icon">
+                                <i class="fa fa-key"></i>
+                                <div class="form-text large">
+                                    <input type="password" required="required" placeholder="Password" class="password" name="loginBusinessPassword" id="loginBusinessPassword" data-bind="value:loginBusinessPassword" />
+                                </div>
+                                <span data-for='loginPassword' class='k-invalid-msg'></span>
+                            </div>
+
+                            <div class="form-item icon">
+                                <i class="fa fa-clock-o"></i>
+                                <div class="form-text large">
+                                    <select id="selectTimeZone" data-bind="value: timeZone" class="selectTimeZone" onchange="app.businessAccount.onSelectChange(this)">
+                                        <option value="Y">(UTC -12:00 hours) Enitwetok, Kwajalien</option>
+                                        <option value="X">(UTC -11:00 hours) MValueway Island, Samoa</option>
+                                        <option value="HAST">(UTC -10:00 hours) Hawaii</option>
+                                        <option value="AKST">(UTC -9:00 hours) Alaska </option>
+                                        <option value="PST">(UTC -8:00 hours) Pacific Time (US & Canada) </option>
+                                        <option value="MST">(UTC -7:00 hours) Mountain Time (US & Canada)</option>
+                                        <option value="CST">(UTC -6:00 hours) Central Time (US & Canada)</option>
+                                        <option value="EST" selected>(UTC -5:00 hours) Eastern Time (US & Canada)</option>
+                                        <option value="VET">(UTC -4:30 hours) Caracas</option>
+                                        <option value="AST">(UTC -4:00 hours) Atlantic Time (Canada)</option>
+                                        <option value="NST">(UTC -3:30 hours) Newfoundland</option>
+                                        <option value="BRT">(UTC -3:00 hours) Brazil, Buenos Aires, Georgetown, Falkland Isl.</option>
+                                        <option value="FNT">(UTC -2:00 hours) MValue-Atlantic, Ascention Isl., St Helena</option>
+                                        <option value="CVT">(UTC -1:00 hour) Azores, Cape Verde Islands</option>
+                                        <option value="GMT">(UTC) Casablanca, Dublin, Edinburgh, London, Lisbon, Monrovia </option>
+                                        <option value="CET">(UTC +1:00 hour) Amsterdam, Berlin, Copenhagen, MadrValue, Paris, Rome"</option>
+                                        <option value="CAT">(UTC +2:00 hours) Kaliningrad, South Africa, Warsaw, Lebanon</option>
+                                        <option value="EAT">(UTC +3:00 hours) Baghdad, Riyadh, Moscow, Nairobi</option>
+                                        <option value="IRST">(UTC +3:30 hours) Tehran</option>
+                                        <option value="GST">(UTC +4:00 hours) Adu Dhabi, Baku, Muscat, Tbilisi</option>
+                                        <option value="AFT">(UTC +4:30 hours) Kabul</option>
+                                        <option value="PKT">(UTC +5:00 hours) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+                                        <option value="IST">(UTC +5:30 hours) Bombay, Calcutta, Madras, New Delhi</option>
+                                        <option value="BST">(UTC +6:00 hours) Almaty, Colomba, Dhakra</option>
+                                        <option value="ICT">(UTC +7:00 hours) Bangkok, Hanoi, Jakarta</option>
+                                        <option value="SGT">(UTC +8:00 hours) Beijing, Hong Kong, Perth, Singapore, Taipei</option>
+                                        <option value="JST">(UTC +9:00 hours) Osaka, Sapporo, Seoul, Tokyo, Yakutsk</option>
+                                        <option value="ACST">(UTC +9:30 hours) AdelaValuee, Darwin</option>
+                                        <option value="AEST">(UTC +10:00 hours) Melbourne, Papua New Guinea, Sydney, Vladivostok</option>
+                                        <option value="SBT">(UTC +11:00 hours) Magadan, New Caledonia, Solomon Islands</option>
+                                        <option value="MHT">(UTC +12:00 hours) Auckland, Wellington, Fiji, Marshall Island</option>
+
+                                    </select>
+                                </div>
+                                <span data-for='loginPassword' class='k-invalid-msg'></span>
+                            </div>
+                        </div>
+                        <a data-role="button" class="button-kit xlarge green" data-bind="click: createBusinessAccount">Register</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id = "com.vrindi.vrindimobileapp"
+        version = "1.1.0">
+
+  <name>Time Tracker Testing</name>
+
+  <description>Time Tracker provides Easily way to caputre and Track Employee Attendance</description>
+
+  <author href="http://www.vrindi.com" email="support@vrindi.com">Vrindi Inc.</author>
+
+  <content src="index.html" />
+
+ 
+
+  <gap:plugin name="com.badrit.macaddress" version="0.1.0" />
+  <gap:plugin name="com.phonegap.plugins.barcodescanner" version="2.2.0" />
+  <gap:plugin name="org.apache.cordova.core.dialogs" version="0.2.10" />
+  <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
+  
+  <feature name="http://api.phonegap.com/1.0/device" />
+  <preference name="permissions" value="none"/>
+  
+  <preference name="phonegap-version" value="3.7.0" />
+  <preference name="splash-screen-duration" value="10000" />
+  <preference name="orientation" value="default" />
+  <preference name="target-device" value="universal"  />
+  <preference name="fullscreen" value="true" />
+  <preference name="webviewbounce" value="true" />
+  <preference name="prerendered-icon" value="true" />
+  <preference name="stay-in-webview" value="false" />
+  <preference name="ios-statusbarstyle" value="black-opaque" />
+  <preference name="detect-data-types" value="true" />
+  <preference name="exit-on-suspend" value="false" />
+  <preference name="show-splash-screen-spinner" value="true" />
+  <preference name="auto-hide-splash-screen" value="true" />
+  <preference name="disable-cursor" value="false" />
+  <preference name="android-minSdkVersion" value="7" />
+  <preference name="android-installLocation" value="auto" />
+
+  <icon src="images/Icons/Icon_36x36.png" gap:platform="android" gap:density="ldpi" />
+  <icon src="images/Icons/Icon_48x48.png" gap:platform="android" gap:density="mdpi" />
+  <icon src="images/Icons/Icon_72x72.png" gap:platform="android" gap:density="hdpi" />
+  <icon src="images/Icons/Icon_96x96.png" gap:platform="android" gap:density="xhdpi" />
+
+  <icon src="Images/Icons/Icon_57x57.png" gap:platform="ios" width="57"  height="57"  />
+  <icon src="Images/Icons/Icon_72x72.png" gap:platform="ios" width="72"  height="72"  />
+
+  <gap:splash src="images/SplashScreen/Splashscreen_240x320.jpg" gap:platform="android" gap:density="ldpi" />
+  <gap:splash src="images/SplashScreen/Splashscreen_320x480.jpg" gap:platform="android" gap:density="mdpi" />
+  <gap:splash src="images/SplashScreen/Splashscreen_480x800.jpg" gap:platform="android" gap:density="hdpi" />
+  <gap:splash src="images/SplashScreen/Splashscreen_640x960.jpg" gap:platform="android" gap:density="xhdpi" />
+  <gap:splash src="Images/SplashScreen/Splashscreen_320x480.png" gap:platform="ios" width="320" height="480" />
+  <gap:splash src="Images/SplashScreen/Splashscreen_640x960.png" gap:platform="ios" width="640" height="960" />
+  <gap:splash src="Images/SplashScreen/Splashscreen_768x1024.png" gap:platform="ios" width="768" height="1024" />
+  <gap:splash src="Images/SplashScreen/Splashscreen_1024x768.png" gap:platform="ios" width="1024" height="768" />
+  <gap:splash src="Images/SplashScreen/Splashscreen_640x1136.png" gap:platform="ios" width="640" height="1136" />
+  
+  <access origin="testmobileapp603.webondemo.com"/>
+
+
+</widget>

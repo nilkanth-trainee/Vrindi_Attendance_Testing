@@ -1,0 +1,102 @@
+﻿<div id="ETrackingStoreInfo" data-role="view" data-title="Time Tracker" data-layout="ETrackingWaveHomeLayout" data-model="app.storeInfo" data-init="app.storeInfo.init" data-show="app.storeInfo.show" data-use-native-srolling="true">
+    <header data-role="header">
+        <div data-role="navbar">
+            <a class="about-button" data-align="left" href="#:back" data-role="button"><i class="fa fa-chevron-left"></i> Back</a>
+            <span data-role="view-title"></span>
+        </div>
+    </header>
+    <div data-role="footer">
+        <div class="divPoweredByVrindi">
+            <a href="https://www.vrindi.com" class="abtnVrindi" data-role="button" data-rel="external">Powered by Vrindi Inc.</a>
+        </div>
+    </div>
+    <div class="controller-login">
+        <!--  <div class="login-logo wagebase"></div>-->
+        <form id="ETrackingStoreInfoForm">
+            <div class="login-holder">
+                <div class="login-box">
+                    <div class="card-section" style="width:100%;margin:0 auto;padding:0px 20px 30px">
+                        <div class="form-heading">
+                            <label id="storeUserTitle" class="lblHeading"></label>
+                        </div>
+                        <div class="form-joined">
+                            <div class="form-item icon">
+                                <i class="fa fa-key"></i>
+                                <div class="form-text large" style="width: 125px;float:left;">
+                                    <input type="password" disabled="disabled" required="required" placeholder="passcode" style="width: 100%" maxlength="4" class="password" name="loginStorePassword" id="loginStorePassword" data-bind="value:loginStorePassword" /> 
+                                </div>
+                                 <a data-role="button"  data-bind="click: clearPasswordField" style="padding:15px;height:45px;" ><i class="fa fa-close"></i></a>
+                                
+                                <div style="float: right">
+                                    <table cellpadding="0" cellspacing="0" style="padding-top:5px;">
+                                        <tr>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;
+                                                <i class="fa fa-eye"></i> Show Passcode 
+                                            </td>
+                                            <td style="padding-left:8px;">
+                                                <input class="txtShowPassword" data-role="switch" id="txtShowPassword" data-bind="events: { change: viewPassword }">
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+                            </div>
+                            <div style="clear:both">&nbsp;</div> 
+                            <hr />
+                            <br />     <br />
+                            <table cellpadding="0" cellspacing="10" style="width:330px;margin:0 auto">
+                                <caption><i class="fa fa-info-circle"></i>  <u>Use KeyPad to enter your 4 digit Passcode</u></caption>
+                                <tr>
+                                    <td>
+                                        <a data-role="button" class="thumbClickGreenBtn" data-bind="click: gridButtonClick" data-number="7">7</a>
+                                    </td>
+                                    <td>
+                                        <a data-role="button" class="thumbClickGreenBtn" data-bind="click: gridButtonClick" data-number="8">8</a>
+                                    </td>
+                                    <td>
+                                        <a data-role="button" class="thumbClickGreenBtn" data-bind="click: gridButtonClick" data-number="9">9</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a data-role="button" class="thumbClickGreenBtn" data-bind="click: gridButtonClick" data-number="4">4</a>
+                                    </td>
+                                    <td>
+                                        <a data-role="button" class="thumbClickGreenBtn" data-bind="click: gridButtonClick" data-number="5">5</a>
+                                    </td>
+                                    <td>
+                                        <a data-role="button" class="thumbClickGreenBtn" data-bind="click: gridButtonClick" data-number="6">6</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a data-role="button" class="thumbClickGreenBtn" data-bind="click: gridButtonClick" data-number="1">1</a>
+                                    </td>
+                                    <td>
+                                        <a data-role="button" class="thumbClickGreenBtn" data-bind="click: gridButtonClick" data-number="2">2</a>
+                                    </td>
+                                    <td>
+                                        <a data-role="button" class="thumbClickGreenBtn" data-bind="click: gridButtonClick" data-number="3">3</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a data-role="button" class="thumbClickGreenBtn" data-bind="click: gridButtonClick" data-number="0">0</a>
+                                    </td>
+                                    <td colspan="2">
+                                        <a data-role="button" class="thumbClickGreenBtnColspan" data-bind="click: gridButtonClick" data-number="b"><i class="fa fa-arrow-left"></i> Backspace</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+

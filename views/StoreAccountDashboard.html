@@ -1,0 +1,93 @@
+<div data-role="view" id="ETrackingStoreAccountDashboardDrawer"  data-title="Time Tracker" data-layout="ETrackingWaveHomeLayout" data-use-native-scrolling="true">
+    <header data-role="header">
+        <div data-role="navbar">
+            <a  class="nav-button" href="#leftSidePanelStoreAdmin" data-rel="drawer" data-role="button"  data-align="left"><i class="fa fa-bars"></i> </a>
+            <span data-role="view-title"></span>
+            <a class="nav-button" data-role="button" data-align="right" data-click="app.storeAccountDashboard.logout"><i class="fa fa-power-off"></i> Admin Logout</a>
+        </div>
+    </header>
+    <div data-role="footer">
+        <div class="divPoweredByVrindi">
+            <a href="https://www.vrindi.com" class="abtnVrindi" data-role="button" data-rel="external">Powered by Vrindi Inc.</a>
+        </div>
+    </div>
+
+    <div class="controller-login">
+        <form id="ETrackingStoreInfoForm">
+            <div class="login-holder">
+                <div class="login-box">
+                    <div class="card-section">
+                        <div class="form-joined">
+                            <div class="form-item icon">
+                                <div class="form-text large" style="border: none">
+                                    <div class="form-text large" style="border: none">
+                                        <div class="form-heading">
+                                            <!-- <i class="fa fa-info-circle"></i> -->
+                                            <label id="lblHeadingCompany" class="lblHeading">Employee List</label>
+                                        </div>
+                                        <ul  class="lStoreUserListFilterable" id="lStoreUserListFilterable" data-style="inset"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </form>
+    </div>
+</div>
+
+
+<div data-role="view" id="storeAccoundDashboardViewEmployeeStatus"  data-title="Time Tracker" data-layout="ETrackingWaveHomeLayout" data-use-native-scrolling="true">
+    <header data-role="header">
+        <div data-role="navbar">
+            <a  class="nav-button" href="#leftSidePanelStoreAdmin" data-rel="drawer" data-role="button"  data-align="left"><i class="fa fa-bars"></i> </a>
+            <span data-role="view-title"></span>
+            <a class="nav-button" data-role="button" data-align="right" data-click="app.storeAccountDashboard.logout"><i class="fa fa-power-off"></i> Admin Logout</a>
+        </div>
+    </header>
+    <div data-role="footer">
+        <div class="divPoweredByVrindi">
+            <a href="https://www.vrindi.com" class="abtnVrindi" data-role="button" data-rel="external">Powered by Vrindi Inc.</a>
+        </div>
+    </div>
+
+    <div class="controller-login">
+        <form id="Form1">
+            <div class="login-holder">
+                <div class="login-box">
+                    <div class="card-section">
+                        <div class="form-joined">
+                            <div class="form-item icon">
+                                <div class="form-text large" style="border: none">
+                                    <div class="form-text large" style="border: none">
+                                        <div class="form-heading">
+                                            <!-- <i class="fa fa-info-circle"></i> -->
+                                            <label id="Label1" class="lblHeading">Employee List</label>
+                                        </div>
+                                        <ul  class="lStoreUserListFilterable" id="Ul1" data-style="inset"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </form>
+    </div>
+</div>
+
+<div data-role="drawer" id="leftSidePanelStoreAdmin" data-title="Go To" data-use-native-scrolling="true" data-views="['ETrackingStoreAccountDashboardDrawer','ETrackingWaveCreateStoreUserView']" >
+    <header data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+        </div>
+    </header>
+    
+     <ul data-role="listview" class="km-listview-icons">
+        <li><a href="Views/RegisterEmployees.html">Register Employee</a></li>
+        <li><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Application Panel</li>
+    </ul>
+   
+</div>	
+

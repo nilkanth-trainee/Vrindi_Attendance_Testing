@@ -1,0 +1,142 @@
+﻿<div data-role="view" data-title="Time Tracker" data-layout="ETrackingWaveHomeLayout" data-model="app.MarkUserEntry" data-init="app.MarkUserEntry.init" data-show="app.MarkUserEntry.show" data-use-native-srolling="true">
+
+    <header data-role="header">
+        <div data-role="navbar">
+            <a class="logut-button" data-align="left" href="#:back" data-role="button"><i class="fa fa-chevron-left"></i> Back</a>
+            <span data-role="view-title"></span>
+            <a data-role="button" data-align="right" rel="external" href="views/AccountDashboard.html" id="btnHomePage"><i class="fa  fa-home"></i> &nbsp;</a>
+        </div>
+    </header>
+    <div data-role="footer">
+        <div class="divPoweredByVrindi">
+            <a href="https://www.vrindi.com" class="abtnVrindi" data-role="button" data-rel="external">Powered by Vrindi Inc.</a>
+        </div>
+    </div>
+    <div class="controller-login">
+        <form>
+            <div class="login-holder">
+                <div class="login-box">
+                    <div class="card-section">
+                        <div class="form-item icon">
+                            <div class="form-text large" style="border: none">
+                            </div>
+                        </div>
+                        <label class="lblHeading" id="lblHeading">Please Mark your selection !!</label><br />
+                        <label class="lblHeading" id="lblDateTime"></label>
+                        <div class="form-joined">
+                            <div class="form-item icon">
+                                <div class="form-text large" style="border: none;margin:0 35px;">
+                                    <a id="btnDayBegin" data-role="button" class="button-kit xlarge green" data-bind="click: onMarkDayBeginEntry">Start of Day</a>
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="form-item icon">
+                                <div class="form-text large" style="border: none">
+                                    <!--    <a id="btnBreakBegin" data-role="button" href="#replyBreakEntryOptions" data-rel="actionsheet" class="button-kit xlarge green">Break</a>-->
+                                    <div id="divBreakEntryOptionsContainer">
+                                        <ul data-role="listview" data-style="inset">
+                                            <li class="breakEntryContainer">
+                                                <div class="divBreakEntryTYpe">Break Entry</div>
+                                                <ul class="innerUlBreakEntryType">
+                                                    <li>
+                                                        <div class="form-text large" style="border: none">
+                                                            <a id="btnBreakLunch" data-role="button" class="button-kit xlarge green" data-bind="click:onBreakLunchEntryType">Lunch</a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-text large" style="border: none">
+                                                            <a id="btnBreakPersonal" data-role="button" class="button-kit xlarge green" data-bind="click:onBreakPersonalEntryType">Personal</a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-text large" style="border: none">
+                                                            <a id="btnBreakOfficeWork" data-role="button" class="button-kit xlarge green" data-bind="click:onBreakOfficeEntryType">Office Work</a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="form-text large" style="border: none">
+                                                            <a id="btnBreakElectricOutage" data-role="button" class="button-kit xlarge green" data-bind="click:onBreakElectrictyOutage">Electricity Outage</a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <br />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a id="btnBreakEnd" data-role="button" data-bind="click: onMarkBreakEndEntry" class="hideEntryButtons button-kit xlarge green">End of Break</a>
+
+                                </div>
+                                <!--   <div class="form-text large" style="border: none">
+                                    <ul data-role="actionsheet" id="replyBreakEntryOptions" data-cancel="Close">
+                                        <li><a data-action="app.MarkUserEntry.onBreakLunchEntryType">Lunch</a></li>
+                                        <li><a data-action="app.MarkUserEntry.onBreakPersonalEntryType">Personal</a></li>
+                                        <li><a data-action="app.MarkUserEntry.onBreakOfficeEntryType">Office Work</a></li>
+                                        <li><a data-action="app.MarkUserEntry.onBreakElectrictyOutage">Electricity Outage </a></li>
+                                    </ul>
+                                </div>-->
+
+                                <br />
+                            </div>
+                            <div class="form-item icon">
+                                <div class="form-text large" style="border: none;margin:0 35px;">
+                                    <a id="btnDayEnd" data-role="button" class="button-kit xlarge green" data-bind="click: onMarkEndDayEntry">End of Day</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="divCurrentDayEntries">
+            <label class="lblHeading" id="lblEntryDetailHeadin">Today's Entries</label>
+            <hr />
+            <div id="divNoEntriesFond">You have not done any Entries for Today, Please Mark your selection...</div>
+            <ul data-role="listview" id="lmyEntries" data-style="inset"></ul>
+        </div>
+    </div>
+</div>
+<script id="myEntriesTemplate" type="text/x-kendo-template">
+        <div class="divEntryRow">
+            # if (EntryType == 'DB'){ #
+                    <div class="rowUserEntryDetail">
+                        <i class="entryDetailsIcons fa fa-clock-o"></i>Start of Day
+                        <span class="spnFormatedDateTimeEntry">#: FormatedDateTime #</span>
+                    </div>
+            # } else if (EntryType == 'DE'){ #
+                   <div class='rowUserEntryDetail'>
+                         <i class="entryDetailsIcons fa fa-moon-o"></i>End of Day
+                         <span class="spnFormatedDateTimeEntry">#: FormatedDateTime #</span>
+                    </div>
+            # } else if (EntryType == 'BE'){ #
+                     <div class='rowUserEntryDetail'>
+                        <i class="entryDetailsIcons fa fa-coffee"></i>Start of Break ( <span class="spnEntryDescription">#: EntryDescription #</span> )
+                        <span class="spnFormatedDateTimeEntry">#: FormatedDateTime #</span>
+                        
+                    </div>
+             # } else if (EntryType == 'BEnd'){ #
+                     <div class='rowUserEntryDetail'>
+                         <i class="entryDetailsIcons fa  fa-stop"></i>End of Break
+                         <span class="spnFormatedDateTimeEntry">#: FormatedDateTime #</span>
+                    </div>
+             # } #
+            
+         
+        </div>
+</script>
+<style>
+    .breakEntryContainer .form-text {
+        background: none;
+    }
+
+    .divBreakEntryTYpe {
+        width: 100px;
+        margin: 0 auto;
+        font-size: 17px;
+    }
+
+    .innerUlBreakEntryType {
+        margin: 0px;
+        padding: 0px;
+    }
+</style>
+
