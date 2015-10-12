@@ -37,7 +37,7 @@ var app = (function (win) {
     };
 
     var AppHelper = {
-        appmode: false,
+        appmode: true,
         appName: "ETrackingWave",
         appApIURL: "http://testmobileapp603.webondemo.com/ETrackingWaveApi/EtrackingWave.asmx/",
         formatDate: function (dateString) {
