@@ -2,7 +2,7 @@ var app = (function (win) {
 
     'use strict';
 
-    var appmode = false;
+    var appmode = true;
 
     var showAlert = function (message, title, buttonName) {
         if (appmode)
